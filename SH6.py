@@ -41,7 +41,7 @@ if __name__ == '__main__':
             guessed_char = input(f'(Player 2) Please enter guess #{i} again with valid character: ').upper()[0] # only take the first character from the input string
 
         # if user already guessed the character before, allow user to try again with another character
-        if guessed_char in progress or guessed_char in misses:
+        if guessed_char[0] in progress or guessed_char[0] in misses:
           	guessed_char = input(f'(Player 2) You have already guessed the character "{guessed_char}". Please enter another character: ').upper()[0] # only take the first character from the input string
         
         # call function to return the found indexes in the word
