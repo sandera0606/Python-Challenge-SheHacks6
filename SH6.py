@@ -5,7 +5,7 @@ def hang_man(character, word):
     position = []
     for i in range(len(word)):
         if word[i] == character:
-        		position.append(i)
+        	position.append(i)
     return position
 
 
@@ -42,7 +42,7 @@ if __name__ == '__main__':
 
         # if user already guessed the character before, allow user to try again with another character
         if guessed_char[0] in progress or guessed_char[0] in misses:
-          	guessed_char = input(f'(Player 2) You have already guessed the character "{guessed_char}". Please enter another character: ').upper()[0] # only take the first character from the input string
+        	guessed_char = input(f'(Player 2) You have already guessed the character "{guessed_char}". Please enter another character: ').upper()[0] # only take the first character from the input string
         
         # call function to return the found indexes in the word
         pos = hang_man(guessed_char, word)
